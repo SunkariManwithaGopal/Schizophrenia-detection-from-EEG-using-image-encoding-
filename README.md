@@ -1,0 +1,1 @@
+# Schizophrenia-detection-from-EEG-using-image-encoding-
