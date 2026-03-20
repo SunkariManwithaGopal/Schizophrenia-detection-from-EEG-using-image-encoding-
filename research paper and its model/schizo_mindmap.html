@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schizophrenia EEG Detection – Mind Map</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f172a; font-family: 'Segoe UI', sans-serif; color: #e2e8f0; min-height: 100vh; overflow-x: hidden; }
+  h1 { text-align: center; padding: 28px 20px 8px; font-size: 1.5rem; color: #7dd3fc; letter-spacing: 0.04em; }
+  p.sub { text-align: center; color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
+
+  .canvas { display: flex; justify-content: center; align-items: flex-start; padding: 10px 30px 50px; }
+  svg { width: 100%; max-width: 1260px; height: auto; }
+
+  /* Node styles */
+  .center-node rect { fill: #1e40af; stroke: #3b82f6; stroke-width: 2.5; rx: 14; }
+  .center-node text { fill: #fff; font-weight: 700; font-size: 15px; }
+
+  .stage-node rect { stroke-width: 2; rx: 10; }
+  .stage-node text { font-weight: 600; font-size: 12.5px; }
+
+  .s1 rect { fill: #065f46; stroke: #10b981; }
+  .s1 text { fill: #a7f3d0; }
+  .s2 rect { fill: #1e3a8a; stroke: #60a5fa; }
+  .s2 text { fill: #bfdbfe; }
+  .s3 rect { fill: #4c1d95; stroke: #a78bfa; }
+  .s3 text { fill: #ddd6fe; }
+  .s4 rect { fill: #78350f; stroke: #fbbf24; }
+  .s4 text { fill: #fde68a; }
+  .s5 rect { fill: #7f1d1d; stroke: #f87171; }
+  .s5 text { fill: #fecaca; }
+
+  .leaf rect { fill: #1e293b; stroke-width: 1.5; rx: 8; }
+  .leaf text { font-size: 11px; fill: #cbd5e1; }
+  .l1 rect { stroke: #10b981; }
+  .l2 rect { stroke: #60a5fa; }
+  .l3 rect { stroke: #a78bfa; }
+  .l4 rect { stroke: #fbbf24; }
+  .l5 rect { stroke: #f87171; }
+
+  line { stroke-width: 1.5; stroke-opacity: 0.55; }
+  .e1 { stroke: #10b981; }
+  .e2 { stroke: #60a5fa; }
+  .e3 { stroke: #a78bfa; }
+  .e4 { stroke: #fbbf24; }
+  .e5 { stroke: #f87171; }
+
+  .badge { font-size: 10.5px; fill: #fff; font-weight: 700; }
+
+  /* Legend */
+  .legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding: 0 20px 40px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #94a3b8; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<h1>Schizophrenia Detection from EEG Signals — Process Mind Map</h1>
+<p class="sub">Three-Stage Framework: Image Encoding → Feature Extraction → Feature Selection & Classification</p>
+
+<div class="canvas">
+<svg viewBox="0 0 1260 820" xmlns="http://www.w3.org/2000/svg">
+
+<!-- ───── EDGES: CENTER → STAGE ───── -->
+<line class="e1" x1="630" y1="400" x2="200" y2="170"/>
+<line class="e2" x1="630" y1="400" x2="630" y2="130"/>
+<line class="e3" x1="630" y1="400" x2="1060" y2="170"/>
+<line class="e4" x1="630" y1="400" x2="200" y2="630"/>
+<line class="e5" x1="630" y1="400" x2="1060" y2="630"/>
+
+<!-- ───── EDGES: STAGE → LEAVES ───── -->
+<!-- Stage 1 leaves -->
+<line class="e1" x1="200" y1="170" x2="55" y2="65"/>
+<line class="e1" x1="200" y1="170" x2="55" y2="130"/>
+<line class="e1" x1="200" y1="170" x2="55" y2="195"/>
+<line class="e1" x1="200" y1="170" x2="55" y2="260"/>
+
+<!-- Stage 2 leaves -->
+<line class="e2" x1="630" y1="130" x2="390" y2="40"/>
+<line class="e2" x1="630" y1="130" x2="530" y2="40"/>
+<line class="e2" x1="630" y1="130" x2="660" y2="40"/>
+<line class="e2" x1="630" y1="130" x2="790" y2="40"/>
+<line class="e2" x1="630" y1="130" x2="910" y2="40"/>
+
+<!-- Stage 3 leaves -->
+<line class="e3" x1="1060" y1="170" x2="1150" y2="65"/>
+<line class="e3" x1="1060" y1="170" x2="1205" y2="130"/>
+<line class="e3" x1="1060" y1="170" x2="1205" y2="195"/>
+<line class="e3" x1="1060" y1="170" x2="1205" y2="260"/>
+
+<!-- Stage 4 leaves -->
+<line class="e4" x1="200" y1="630" x2="55" y2="530"/>
+<line class="e4" x1="200" y1="630" x2="55" y2="600"/>
+<line class="e4" x1="200" y1="630" x2="55" y2="670"/>
+<line class="e4" x1="200" y1="630" x2="55" y2="740"/>
+
+<!-- Stage 5 leaves -->
+<line class="e5" x1="1060" y1="630" x2="1150" y2="530"/>
+<line class="e5" x1="1060" y1="630" x2="1205" y2="600"/>
+<line class="e5" x1="1060" y1="630" x2="1205" y2="670"/>
+<line class="e5" x1="1060" y1="630" x2="1205" y2="740"/>
+
+<!-- ───── CENTER NODE ───── -->
+<g class="center-node">
+  <rect x="490" y="365" width="280" height="70" rx="14" fill="#1e40af" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="630" y="393" text-anchor="middle" fill="#fff" font-weight="700" font-size="14">EEG Schizophrenia</text>
+  <text x="630" y="413" text-anchor="middle" fill="#93c5fd" font-size="12">Detection Framework</text>
+  <text x="630" y="430" text-anchor="middle" fill="#60a5fa" font-size="10.5">99.67% & 99.97% Accuracy</text>
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  STAGE 1 — DATA & PREPROCESSING  -->
+<!-- ══════════════════════════════════ -->
+<g class="stage-node s1">
+  <rect x="110" y="140" width="180" height="60" rx="10"/>
+  <text x="200" y="163" text-anchor="middle">STAGE 1</text>
+  <text x="200" y="180" text-anchor="middle">EEG Data &amp; Preprocessing</text>
+</g>
+
+<!-- Leaves S1 -->
+<g class="leaf l1">
+  <rect x="-80" y="43" width="130" height="44" rx="8"/>
+  <text x="-15" y="60" text-anchor="middle">M.S.U Dataset</text>
+  <text x="-15" y="74" text-anchor="middle" font-size="10" fill="#6ee7b7">84 subjects · 16 ch · 128Hz</text>
+</g>
+<g class="leaf l1">
+  <rect x="-80" y="108" width="130" height="44" rx="8"/>
+  <text x="-15" y="126" text-anchor="middle">RepOD Dataset</text>
+  <text x="-15" y="140" text-anchor="middle" font-size="10" fill="#6ee7b7">28 subjects · 19 ch · 250Hz</text>
+</g>
+<g class="leaf l1">
+  <rect x="-80" y="173" width="130" height="44" rx="8"/>
+  <text x="-15" y="191" text-anchor="middle">Artifact Removal</text>
+  <text x="-15" y="205" text-anchor="middle" font-size="10" fill="#6ee7b7">Eye/Cardiac/Muscle</text>
+</g>
+<g class="leaf l1">
+  <rect x="-80" y="238" width="130" height="44" rx="8"/>
+  <text x="-15" y="256" text-anchor="middle">Butterworth Filter</text>
+  <text x="-15" y="270" text-anchor="middle" font-size="10" fill="#6ee7b7">δ θ α β γ bands</text>
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  STAGE 2 — IMAGE ENCODING        -->
+<!-- ══════════════════════════════════ -->
+<g class="stage-node s2">
+  <rect x="545" y="100" width="170" height="60" rx="10"/>
+  <text x="630" y="124" text-anchor="middle">STAGE 2</text>
+  <text x="630" y="141" text-anchor="middle">Image Encoding (CWT)</text>
+</g>
+
+<!-- Leaves S2 -->
+<g class="leaf l2">
+  <rect x="330" y="18" width="120" height="44" rx="8"/>
+  <text x="390" y="36" text-anchor="middle">Morlet Wavelet</text>
+  <text x="390" y="50" text-anchor="middle" font-size="10" fill="#93c5fd">CWT basis function</text>
+</g>
+<g class="leaf l2">
+  <rect x="470" y="18" width="120" height="44" rx="8"/>
+  <text x="530" y="36" text-anchor="middle">Scalogram</text>
+  <text x="530" y="50" text-anchor="middle" font-size="10" fill="#93c5fd">Time-Freq image</text>
+</g>
+<g class="leaf l2">
+  <rect x="600" y="18" width="120" height="44" rx="8"/>
+  <text x="660" y="36" text-anchor="middle">Sliding Window</text>
+  <text x="660" y="50" text-anchor="middle" font-size="10" fill="#93c5fd">20s win · 15s overlap</text>
+</g>
+<g class="leaf l2">
+  <rect x="730" y="18" width="120" height="44" rx="8"/>
+  <text x="790" y="36" text-anchor="middle">Image Volume</text>
+  <text x="790" y="50" text-anchor="middle" font-size="10" fill="#93c5fd">12k / 89k images</text>
+</g>
+<g class="leaf l2">
+  <rect x="855" y="18" width="120" height="44" rx="8"/>
+  <text x="915" y="36" text-anchor="middle">Pixel Encoding</text>
+  <text x="915" y="50" text-anchor="middle" font-size="10" fill="#93c5fd">256×256 input</text>
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  STAGE 3 — FEATURE EXTRACTION    -->
+<!-- ══════════════════════════════════ -->
+<g class="stage-node s3">
+  <rect x="970" y="140" width="180" height="60" rx="10"/>
+  <text x="1060" y="163" text-anchor="middle">STAGE 3</text>
+  <text x="1060" y="180" text-anchor="middle">CNN Feature Extraction</text>
+</g>
+
+<!-- Leaves S3 -->
+<g class="leaf l3">
+  <rect x="1100" y="43" width="148" height="44" rx="8"/>
+  <text x="1174" y="61" text-anchor="middle">EfficientNetB3</text>
+  <text x="1174" y="75" text-anchor="middle" font-size="10" fill="#c4b5fd">1536 features / GAP</text>
+</g>
+<g class="leaf l3">
+  <rect x="1130" y="108" width="118" height="44" rx="8"/>
+  <text x="1189" y="126" text-anchor="middle">DenseNet169</text>
+  <text x="1189" y="140" text-anchor="middle" font-size="10" fill="#c4b5fd">1664 features / GAP</text>
+</g>
+<g class="leaf l3">
+  <rect x="1130" y="173" width="118" height="44" rx="8"/>
+  <text x="1189" y="191" text-anchor="middle">Transfer Learning</text>
+  <text x="1189" y="205" text-anchor="middle" font-size="10" fill="#c4b5fd">ImageNet weights</text>
+</g>
+<g class="leaf l3">
+  <rect x="1130" y="238" width="118" height="44" rx="8"/>
+  <text x="1189" y="256" text-anchor="middle">Feature Concat</text>
+  <text x="1189" y="270" text-anchor="middle" font-size="10" fill="#c4b5fd">3200-dim vector</text>
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  STAGE 4 — FEATURE SELECTION     -->
+<!-- ══════════════════════════════════ -->
+<g class="stage-node s4">
+  <rect x="110" y="600" width="180" height="60" rx="10"/>
+  <text x="200" y="624" text-anchor="middle">STAGE 4</text>
+  <text x="200" y="641" text-anchor="middle">ASBO Feature Selection</text>
+</g>
+
+<!-- Leaves S4 -->
+<g class="leaf l4">
+  <rect x="-80" y="508" width="130" height="44" rx="8"/>
+  <text x="-15" y="526" text-anchor="middle">ASBO Algorithm</text>
+  <text x="-15" y="540" text-anchor="middle" font-size="10" fill="#fde68a">Parameter-free optim.</text>
+</g>
+<g class="leaf l4">
+  <rect x="-80" y="578" width="130" height="44" rx="8"/>
+  <text x="-15" y="596" text-anchor="middle">3-Phase Update</text>
+  <text x="-15" y="610" text-anchor="middle" font-size="10" fill="#fde68a">Avg / Diff / Best</text>
+</g>
+<g class="leaf l4">
+  <rect x="-80" y="648" width="130" height="44" rx="8"/>
+  <text x="-15" y="666" text-anchor="middle">Sigmoid Transfer</text>
+  <text x="-15" y="680" text-anchor="middle" font-size="10" fill="#fde68a">Binary feature select</text>
+</g>
+<g class="leaf l4">
+  <rect x="-80" y="718" width="130" height="44" rx="8"/>
+  <text x="-15" y="736" text-anchor="middle">72% Reduction</text>
+  <text x="-15" y="750" text-anchor="middle" font-size="10" fill="#fde68a">3200 → 892 features</text>
+</g>
+
+<!-- ══════════════════════════════════ -->
+<!--  STAGE 5 — CLASSIFICATION        -->
+<!-- ══════════════════════════════════ -->
+<g class="stage-node s5">
+  <rect x="970" y="600" width="180" height="60" rx="10"/>
+  <text x="1060" y="624" text-anchor="middle">STAGE 5</text>
+  <text x="1060" y="641" text-anchor="middle">KNN Classification</text>
+</g>
+
+<!-- Leaves S5 -->
+<g class="leaf l5">
+  <rect x="1100" y="508" width="148" height="44" rx="8"/>
+  <text x="1174" y="526" text-anchor="middle">K-NN Classifier</text>
+  <text x="1174" y="540" text-anchor="middle" font-size="10" fill="#fecaca">Euclidean distance</text>
+</g>
+<g class="leaf l5">
+  <rect x="1130" y="578" width="118" height="44" rx="8"/>
+  <text x="1189" y="596" text-anchor="middle">M.S.U Result</text>
+  <text x="1189" y="610" text-anchor="middle" font-size="10" fill="#fecaca">99.67% accuracy</text>
+</g>
+<g class="leaf l5">
+  <rect x="1130" y="648" width="118" height="44" rx="8"/>
+  <text x="1189" y="666" text-anchor="middle">RepOD Result</text>
+  <text x="1189" y="680" text-anchor="middle" font-size="10" fill="#fecaca">99.97% accuracy</text>
+</g>
+<g class="leaf l5">
+  <rect x="1130" y="718" width="118" height="44" rx="8"/>
+  <text x="1189" y="736" text-anchor="middle">F1 / Precision</text>
+  <text x="1189" y="750" text-anchor="middle" font-size="10" fill="#fecaca">99.96% / 99.95%</text>
+</g>
+
+<!-- ───── FLOW ARROWS between stages ───── -->
+<defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#475569"/>
+  </marker>
+</defs>
+<path d="M630 160 Q630 280 630 365" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,4"/>
+<path d="M310 170 Q470 280 490 380" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,4"/>
+<path d="M950 170 Q800 280 770 380" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,4"/>
+<path d="M490 410 Q350 510 290 600" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,4"/>
+<path d="M770 410 Q920 510 970 615" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,4"/>
+
+<!-- ───── RESULTS BANNER ───── -->
+<rect x="400" y="748" width="460" height="56" rx="12" fill="#1e293b" stroke="#334155"/>
+<text x="630" y="771" text-anchor="middle" fill="#94a3b8" font-size="11">Outperforms SOTA on Both Datasets</text>
+<text x="630" y="791" text-anchor="middle" fill="#7dd3fc" font-size="12" font-weight="700">M.S.U: 99.67%  |  RepOD: 99.97%  |  Features Used: ~1/3 of original</text>
+
+</svg>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div> Stage 1: Data & Preprocessing</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#60a5fa"></div> Stage 2: CWT Image Encoding</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div> Stage 3: CNN Feature Extraction</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div> Stage 4: ASBO Feature Selection</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div> Stage 5: KNN Classification</div>
+</div>
+</body>
+</html>

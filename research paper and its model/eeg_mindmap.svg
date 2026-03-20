@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 2400 1700" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060d1f"/>
+      <stop offset="100%" style="stop-color:#0d1a35"/>
+    </linearGradient>
+    <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a7a"/>
+      <stop offset="100%" style="stop-color:#0f2456"/>
+    </linearGradient>
+    <linearGradient id="step1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="step2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2"/>
+      <stop offset="100%" style="stop-color:#0e7490"/>
+    </linearGradient>
+    <linearGradient id="step3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#047857"/>
+    </linearGradient>
+    <linearGradient id="step4Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#b45309"/>
+    </linearGradient>
+    <linearGradient id="step5Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="100%" style="stop-color:#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="step6Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488"/>
+      <stop offset="100%" style="stop-color:#0f766e"/>
+    </linearGradient>
+    <linearGradient id="step7Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#db2777"/>
+      <stop offset="100%" style="stop-color:#be185d"/>
+    </linearGradient>
+    <!-- Glow filters -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <!-- Arrow marker -->
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4f8cff" opacity="0.7"/>
+    </marker>
+    <marker id="arrowW" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ffffff" opacity="0.4"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2400" height="1700" fill="url(#bgGrad)"/>
+
+  <!-- Grid lines subtle -->
+  <g opacity="0.04" stroke="#4f8cff" stroke-width="1">
+    <line x1="0" y1="200" x2="2400" y2="200"/>
+    <line x1="0" y1="400" x2="2400" y2="400"/>
+    <line x1="0" y1="600" x2="2400" y2="600"/>
+    <line x1="0" y1="800" x2="2400" y2="800"/>
+    <line x1="0" y1="1000" x2="2400" y2="1000"/>
+    <line x1="0" y1="1200" x2="2400" y2="1200"/>
+    <line x1="0" y1="1400" x2="2400" y2="1400"/>
+    <line x1="200" y1="0" x2="200" y2="1700"/>
+    <line x1="600" y1="0" x2="600" y2="1700"/>
+    <line x1="1000" y1="0" x2="1000" y2="1700"/>
+    <line x1="1400" y1="0" x2="1400" y2="1700"/>
+    <line x1="1800" y1="0" x2="1800" y2="1700"/>
+    <line x1="2200" y1="0" x2="2200" y2="1700"/>
+  </g>
+
+  <!-- Title -->
+  <text x="1200" y="52" text-anchor="middle" font-size="28" font-weight="800" fill="#e8eaf6" letter-spacing="2" filter="url(#softGlow)">EEG-BASED SCHIZOPHRENIA DETECTION SYSTEM</text>
+  <text x="1200" y="80" text-anchor="middle" font-size="13" fill="#5a6080" letter-spacing="4">ADVANCED CLINICAL AI PIPELINE · 2025</text>
+
+  <!-- ============================================================ -->
+  <!--  FLOW ARROWS (draw first so nodes sit on top) -->
+  <!-- ============================================================ -->
+
+  <!-- Step 1 → Step 2 -->
+  <path d="M 500,850 C 560,850 600,850 640,850" stroke="#7c3aed" stroke-width="2.5" fill="none" stroke-dasharray="6,3" opacity="0.7" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 → Step 3 -->
+  <path d="M 960,850 C 1020,850 1060,850 1100,850" stroke="#0891b2" stroke-width="2.5" fill="none" stroke-dasharray="6,3" opacity="0.7" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 → Step 4 -->
+  <path d="M 1480,850 C 1540,850 1580,850 1620,850" stroke="#059669" stroke-width="2.5" fill="none" stroke-dasharray="6,3" opacity="0.7" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 → Step 5 -->
+  <path d="M 1900,850 C 1960,850 2000,850 2020,700" stroke="#d97706" stroke-width="2.5" fill="none" stroke-dasharray="6,3" opacity="0.7" marker-end="url(#arrow)"/>
+
+  <!-- Step 5 → Step 6 (output) -->
+  <path d="M 2100,620 C 2140,620 2180,600 2200,500" stroke="#dc2626" stroke-width="2.5" fill="none" stroke-dasharray="6,3" opacity="0.7" marker-end="url(#arrow)"/>
+
+  <!-- Explainability connects to Step 3 output -->
+  <path d="M 1290,580 C 1290,480 1700,300 1800,280" stroke="#0d9488" stroke-width="2" fill="none" stroke-dasharray="4,4" opacity="0.5" marker-end="url(#arrow)"/>
+
+  <!-- Dashboard connects to Step 6 -->
+  <path d="M 2200,460 C 2240,420 2280,380 2300,320" stroke="#db2777" stroke-width="2" fill="none" stroke-dasharray="4,4" opacity="0.5" marker-end="url(#arrow)"/>
+
+  <!-- ============================================================ -->
+  <!--  STEP 1 — PREPROCESSING                                      -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <!-- Main node -->
+    <rect x="140" y="720" width="360" height="260" rx="20" fill="url(#step1Grad)" opacity="0.95"/>
+    <rect x="140" y="720" width="360" height="260" rx="20" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Step label -->
+    <rect x="140" y="720" width="360" height="44" rx="20" fill="#5b21b6"/>
+    <rect x="140" y="744" width="360" height="20" fill="#5b21b6"/>
+    <text x="320" y="748" text-anchor="middle" font-size="11" fill="#c4b5fd" letter-spacing="3" font-weight="700">STEP 01</text>
+    <text x="320" y="769" text-anchor="middle" font-size="16" fill="white" font-weight="800">PREPROCESSING</text>
+
+    <!-- Tool badge -->
+    <rect x="168" y="782" width="88" height="22" rx="11" fill="#4c1d95" opacity="0.8"/>
+    <text x="212" y="797" text-anchor="middle" font-size="10" fill="#ddd6fe" font-weight="600">MNE-Python</text>
+
+    <!-- Content -->
+    <text x="168" y="826" font-size="11.5" fill="#e0e7ff" font-weight="600">① Load raw EEG (.txt / .edf)</text>
+    <text x="168" y="847" font-size="11" fill="#c4b5fd">Bandpass filter: 0.5 – 45 Hz</text>
+
+    <text x="168" y="870" font-size="11.5" fill="#e0e7ff" font-weight="600">② ICA Artifact Removal</text>
+    <text x="168" y="889" font-size="11" fill="#c4b5fd">Remove eye blinks, muscle &amp; cardiac</text>
+
+    <text x="168" y="912" font-size="11.5" fill="#e0e7ff" font-weight="600">③ Average Re-referencing</text>
+    <text x="168" y="931" font-size="11" fill="#c4b5fd">20s windows · 15s overlap</text>
+
+    <!-- Why badge -->
+    <rect x="168" y="944" width="304" height="28" rx="8" fill="#3b0764" opacity="0.7"/>
+    <text x="320" y="962" text-anchor="middle" font-size="10" fill="#f0abfc">✦  Removes artifact noise before CNN sees data</text>
+  </g>
+
+  <!-- Sub-nodes: Step 1 -->
+  <!-- ICA detail -->
+  <rect x="30" y="595" width="200" height="100" rx="12" fill="#2d1b69" stroke="#7c3aed" stroke-width="1" opacity="0.9"/>
+  <text x="130" y="617" text-anchor="middle" font-size="10" fill="#a78bfa" font-weight="700" letter-spacing="2">WHY ICA?</text>
+  <text x="50" y="637" font-size="9.5" fill="#c4b5fd">Eye blinks = voltage spikes</text>
+  <text x="50" y="652" font-size="9.5" fill="#c4b5fd">across ALL frequencies.</text>
+  <text x="50" y="667" font-size="9.5" fill="#c4b5fd">Butterworth can't fix this.</text>
+  <text x="50" y="682" font-size="9.5" fill="#e0e7ff" font-weight="600">ICA removes at the source.</text>
+  <path d="M 230,645 L 210,770" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrowW)"/>
+
+  <!-- 5 Bands -->
+  <rect x="30" y="990" width="210" height="130" rx="12" fill="#2d1b69" stroke="#7c3aed" stroke-width="1" opacity="0.9"/>
+  <text x="135" y="1010" text-anchor="middle" font-size="10" fill="#a78bfa" font-weight="700" letter-spacing="2">5 EEG BANDS</text>
+  <text x="50" y="1030" font-size="10" fill="#fbbf24">δ  Delta    2–4 Hz</text>
+  <text x="50" y="1048" font-size="10" fill="#34d399">θ  Theta   4.5–7.5 Hz</text>
+  <text x="50" y="1066" font-size="10" fill="#60a5fa">α  Alpha   8–12.5 Hz</text>
+  <text x="50" y="1084" font-size="10" fill="#f87171">β  Beta    13–30 Hz</text>
+  <text x="50" y="1102" font-size="10" fill="#e879f9">γ  Gamma  30–45 Hz</text>
+  <path d="M 200,990 L 250,975" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrowW)"/>
+
+  <!-- ============================================================ -->
+  <!--  STEP 2 — DUAL SIGNAL REPRESENTATION                         -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="700" width="320" height="300" rx="20" fill="url(#step2Grad)" opacity="0.95"/>
+    <rect x="640" y="700" width="320" height="300" rx="20" fill="none" stroke="#67e8f9" stroke-width="1.5" opacity="0.6"/>
+
+    <rect x="640" y="700" width="320" height="44" rx="20" fill="#0e7490"/>
+    <rect x="640" y="724" width="320" height="20" fill="#0e7490"/>
+    <text x="800" y="728" text-anchor="middle" font-size="11" fill="#a5f3fc" letter-spacing="3" font-weight="700">STEP 02</text>
+    <text x="800" y="750" text-anchor="middle" font-size="14" fill="white" font-weight="800">DUAL REPRESENTATION</text>
+
+    <!-- Path A -->
+    <rect x="656" y="762" width="136" height="108" rx="10" fill="#065f72" opacity="0.8" stroke="#22d3ee" stroke-width="1"/>
+    <text x="724" y="780" text-anchor="middle" font-size="10" fill="#a5f3fc" font-weight="700">PATH A</text>
+    <text x="724" y="797" text-anchor="middle" font-size="10" fill="white" font-weight="600">CWT Scalogram</text>
+    <text x="668" y="815" font-size="9" fill="#cffafe">Morlet wavelet</text>
+    <text x="668" y="830" font-size="9" fill="#cffafe">16-ch → stacked</text>
+    <text x="668" y="845" font-size="9" fill="#cffafe">tensor (not RGB)</text>
+    <text x="668" y="862" font-size="9" fill="#67e8f9" font-weight="600">Time + Frequency</text>
+
+    <!-- Path B -->
+    <rect x="806" y="762" width="136" height="108" rx="10" fill="#065f72" opacity="0.8" stroke="#22d3ee" stroke-width="1"/>
+    <text x="874" y="780" text-anchor="middle" font-size="10" fill="#a5f3fc" font-weight="700">PATH B</text>
+    <text x="874" y="797" text-anchor="middle" font-size="10" fill="white" font-weight="600">PLV Connectivity</text>
+    <text x="818" y="815" font-size="9" fill="#cffafe">Phase-Locking</text>
+    <text x="818" y="830" font-size="9" fill="#cffafe">Value between</text>
+    <text x="818" y="845" font-size="9" fill="#cffafe">all 16 channels</text>
+    <text x="818" y="862" font-size="9" fill="#67e8f9" font-weight="600">16×16 × 5 bands</text>
+
+    <!-- Combined -->
+    <text x="800" y="894" text-anchor="middle" font-size="10" fill="#e0f2fe" font-weight="700">↓ Both streams feed next step</text>
+
+    <rect x="656" y="906" width="286" height="28" rx="8" fill="#0c4a6e" opacity="0.7"/>
+    <text x="800" y="924" text-anchor="middle" font-size="9.5" fill="#7dd3fc">✦  Scalograms = WHAT (per channel) · PLV = HOW (between channels)</text>
+
+    <!-- Augmentations -->
+    <rect x="656" y="940" width="286" height="52" rx="8" fill="#0c4a6e" opacity="0.6"/>
+    <text x="800" y="957" text-anchor="middle" font-size="9.5" fill="#a5f3fc" font-weight="700">DATA AUGMENTATION</text>
+    <text x="668" y="972" font-size="9" fill="#e0f2fe">Time shift ±2s · Channel dropout · Gaussian noise · Freq masking</text>
+    <text x="668" y="985" font-size="9" fill="#67e8f9">→ Forces robust representations across electrode quality variation</text>
+  </g>
+
+  <!-- PLV detail sub-node -->
+  <rect x="620" y="540" width="200" height="110" rx="12" fill="#0c3b52" stroke="#0891b2" stroke-width="1" opacity="0.9"/>
+  <text x="720" y="562" text-anchor="middle" font-size="10" fill="#67e8f9" font-weight="700" letter-spacing="2">WHY PLV NOT TE?</text>
+  <text x="636" y="582" font-size="9" fill="#cffafe">Transfer Entropy needs</text>
+  <text x="636" y="597" font-size="9" fill="#cffafe">very long signals &amp; slow.</text>
+  <text x="636" y="612" font-size="9" fill="#cffafe">PLV = synchronisation</text>
+  <text x="636" y="627" font-size="9" fill="#e0f2fe" font-weight="600">Fast + clinically validated.</text>
+  <text x="636" y="642" font-size="9" fill="#a5f3fc">Frontal-temporal PLV↓</text>
+  <text x="636" y="657" font-size="9" fill="#a5f3fc">= key schizo biomarker</text>
+  <path d="M 720,650 L 760,700" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrowW)"/>
+
+  <!-- ============================================================ -->
+  <!--  STEP 3 — ARCHITECTURE                                        -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <rect x="1100" y="680" width="380" height="340" rx="20" fill="url(#step3Grad)" opacity="0.95"/>
+    <rect x="1100" y="680" width="380" height="340" rx="20" fill="none" stroke="#6ee7b7" stroke-width="1.5" opacity="0.6"/>
+
+    <rect x="1100" y="680" width="380" height="44" rx="20" fill="#047857"/>
+    <rect x="1100" y="704" width="380" height="20" fill="#047857"/>
+    <text x="1290" y="708" text-anchor="middle" font-size="11" fill="#a7f3d0" letter-spacing="3" font-weight="700">STEP 03</text>
+    <text x="1290" y="730" text-anchor="middle" font-size="14" fill="white" font-weight="800">MODEL ARCHITECTURE</text>
+
+    <!-- EEG-Conformer -->
+    <rect x="1116" y="742" width="160" height="150" rx="10" fill="#064e3b" opacity="0.85" stroke="#34d399" stroke-width="1"/>
+    <text x="1196" y="762" text-anchor="middle" font-size="10" fill="#6ee7b7" font-weight="700">BRANCH 1</text>
+    <text x="1196" y="779" text-anchor="middle" font-size="10" fill="white" font-weight="700">EEG-Conformer</text>
+    <text x="1128" y="797" font-size="9" fill="#a7f3d0">Shallow CNN</text>
+    <text x="1128" y="812" font-size="9" fill="#d1fae5">→ local spatial features</text>
+    <text x="1128" y="829" font-size="9" fill="#a7f3d0">Transformer Encoder</text>
+    <text x="1128" y="844" font-size="9" fill="#d1fae5">→ long-range temporal</text>
+    <text x="1128" y="861" font-size="9" fill="#6ee7b7" font-weight="600">EEG-native design</text>
+    <text x="1128" y="876" font-size="9" fill="#6ee7b7">Not ImageNet pretrained</text>
+
+    <!-- GAT -->
+    <rect x="1290" y="742" width="172" height="150" rx="10" fill="#064e3b" opacity="0.85" stroke="#34d399" stroke-width="1"/>
+    <text x="1376" y="762" text-anchor="middle" font-size="10" fill="#6ee7b7" font-weight="700">BRANCH 2</text>
+    <text x="1376" y="779" text-anchor="middle" font-size="10" fill="white" font-weight="700">Graph Attention</text>
+    <text x="1376" y="796" text-anchor="middle" font-size="9" fill="#a7f3d0">Network (GAT)</text>
+    <text x="1302" y="815" font-size="9" fill="#d1fae5">16 electrodes = nodes</text>
+    <text x="1302" y="830" font-size="9" fill="#d1fae5">PLV matrix = edges</text>
+    <text x="1302" y="847" font-size="9" fill="#a7f3d0">3 attention layers</text>
+    <text x="1302" y="864" font-size="9" fill="#d1fae5">→ learns which brain</text>
+    <text x="1302" y="879" font-size="9" fill="#d1fae5">   connections matter</text>
+
+    <!-- Cross Attention Fusion -->
+    <rect x="1116" y="906" width="346" height="50" rx="10" fill="#022c22" opacity="0.9" stroke="#10b981" stroke-width="1.5"/>
+    <text x="1290" y="927" text-anchor="middle" font-size="11" fill="#6ee7b7" font-weight="700">⚡ Cross-Attention Fusion</text>
+    <text x="1290" y="944" text-anchor="middle" font-size="9" fill="#a7f3d0">Each branch queries the other → dynamic weighting of both signal types</text>
+
+    <!-- Reject old way -->
+    <rect x="1116" y="966" width="346" height="46" rx="8" fill="#022c22" opacity="0.7"/>
+    <text x="1290" y="984" text-anchor="middle" font-size="9.5" fill="#fca5a5" font-weight="700">✗ NOT simple concatenation (paper's approach)</text>
+    <text x="1290" y="1002" text-anchor="middle" font-size="9" fill="#fecaca">Concat = treats both as equal. Attention = learns which matters more per case.</text>
+  </g>
+
+  <!-- EEG-Conformer why sub-node -->
+  <rect x="1060" y="460" width="220" height="130" rx="12" fill="#052e16" stroke="#059669" stroke-width="1" opacity="0.9"/>
+  <text x="1170" y="482" text-anchor="middle" font-size="10" fill="#6ee7b7" font-weight="700" letter-spacing="2">WHY NOT EFFICIENTNET?</text>
+  <text x="1076" y="500" font-size="9" fill="#a7f3d0">EfficientNet pretrained on</text>
+  <text x="1076" y="515" font-size="9" fill="#a7f3d0">natural photos (cats, cars).</text>
+  <text x="1076" y="530" font-size="9" fill="#d1fae5">EEG scalogram axes have</text>
+  <text x="1076" y="545" font-size="9" fill="#d1fae5">physical meaning (Hz, sec).</text>
+  <text x="1076" y="562" font-size="9" fill="#6ee7b7" font-weight="600">EEG-Conformer = built for</text>
+  <text x="1076" y="577" font-size="9" fill="#6ee7b7" font-weight="600">oscillatory brain signals.</text>
+  <path d="M 1170,590 L 1220,680" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrowW)"/>
+
+  <!-- GAT why sub-node -->
+  <rect x="1380" y="460" width="200" height="130" rx="12" fill="#052e16" stroke="#059669" stroke-width="1" opacity="0.9"/>
+  <text x="1480" y="482" text-anchor="middle" font-size="10" fill="#6ee7b7" font-weight="700" letter-spacing="2">WHY GAT NOT GCN?</text>
+  <text x="1396" y="500" font-size="9" fill="#a7f3d0">GCN averages all</text>
+  <text x="1396" y="515" font-size="9" fill="#a7f3d0">neighbours equally.</text>
+  <text x="1396" y="532" font-size="9" fill="#d1fae5">GAT uses attention →</text>
+  <text x="1396" y="547" font-size="9" fill="#d1fae5">learns frontal-temporal</text>
+  <text x="1396" y="562" font-size="9" fill="#d1fae5">path matters most.</text>
+  <text x="1396" y="579" font-size="9" fill="#6ee7b7" font-weight="600">Clinically targeted.</text>
+  <path d="M 1480,590 L 1420,680" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrowW)"/>
+
+  <!-- ============================================================ -->
+  <!--  STEP 4 — TRAINING STRATEGY                                   -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <rect x="1620" y="710" width="290" height="280" rx="20" fill="url(#step4Grad)" opacity="0.95"/>
+    <rect x="1620" y="710" width="290" height="280" rx="20" fill="none" stroke="#fcd34d" stroke-width="1.5" opacity="0.6"/>
+
+    <rect x="1620" y="710" width="290" height="44" rx="20" fill="#b45309"/>
+    <rect x="1620" y="734" width="290" height="20" fill="#b45309"/>
+    <text x="1765" y="738" text-anchor="middle" font-size="11" fill="#fde68a" letter-spacing="3" font-weight="700">STEP 04</text>
+    <text x="1765" y="760" text-anchor="middle" font-size="14" fill="white" font-weight="800">TRAINING STRATEGY</text>
+
+    <!-- Phase 1 -->
+    <rect x="1636" y="773" width="258" height="80" rx="10" fill="#78350f" opacity="0.85" stroke="#fbbf24" stroke-width="1"/>
+    <text x="1765" y="793" text-anchor="middle" font-size="10" fill="#fde68a" font-weight="700">PHASE 1 — Self-Supervised (SimCLR)</text>
+    <text x="1648" y="810" font-size="9" fill="#fef3c7">Pretrain on ALL EEG data (no labels)</text>
+    <text x="1648" y="825" font-size="9" fill="#fef3c7">Same segment → similar representation</text>
+    <text x="1648" y="840" font-size="9" fill="#fbbf24" font-weight="600">→ Learns EEG structure before labels</text>
+
+    <!-- Phase 2 -->
+    <rect x="1636" y="862" width="258" height="60" rx="10" fill="#78350f" opacity="0.85" stroke="#fbbf24" stroke-width="1"/>
+    <text x="1765" y="881" text-anchor="middle" font-size="10" fill="#fde68a" font-weight="700">PHASE 2 — Fine-tuning (Supervised)</text>
+    <text x="1648" y="898" font-size="9" fill="#fef3c7">Apply schizophrenia labels · Small dataset</text>
+    <text x="1648" y="913" font-size="9" fill="#fbbf24" font-weight="600">Model already knows EEG → fast convergence</text>
+
+    <rect x="1636" y="932" width="258" height="50" rx="8" fill="#451a03" opacity="0.7"/>
+    <text x="1765" y="950" text-anchor="middle" font-size="9.5" fill="#fcd34d" font-weight="700">✗ NOT ImageNet transfer learning</text>
+    <text x="1765" y="966" text-anchor="middle" font-size="9" fill="#fef3c7">84 subjects → SSL prevents overfitting</text>
+  </g>
+
+  <!-- SSL why sub-node -->
+  <rect x="1580" y="490" width="210" height="120" rx="12" fill="#431407" stroke="#d97706" stroke-width="1" opacity="0.9"/>
+  <text x="1685" y="512" text-anchor="middle" font-size="10" fill="#fbbf24" font-weight="700" letter-spacing="2">WHY SELF-SUPERVISED?</text>
+  <text x="1596" y="530" font-size="9" fill="#fde68a">Only 84 subjects in MSU.</text>
+  <text x="1596" y="545" font-size="9" fill="#fde68a">Supervised alone = overfits.</text>
+  <text x="1596" y="562" font-size="9" fill="#fef3c7">SimCLR pretrains on all EEG</text>
+  <text x="1596" y="577" font-size="9" fill="#fef3c7">without needing labels first.</text>
+  <text x="1596" y="594" font-size="9" fill="#fbbf24" font-weight="600">Proven for small medical datasets.</text>
+  <path d="M 1685,610 L 1730,710" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arrowW)"/>
+
+  <!-- ============================================================ -->
+  <!--  STEP 5 — UNCERTAINTY OUTPUT                                  -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <rect x="1970" y="570" width="280" height="230" rx="20" fill="url(#step5Grad)" opacity="0.95"/>
+    <rect x="1970" y="570" width="280" height="230" rx="20" fill="none" stroke="#fca5a5" stroke-width="1.5" opacity="0.6"/>
+
+    <rect x="1970" y="570" width="280" height="44" rx="20" fill="#b91c1c"/>
+    <rect x="1970" y="594" width="280" height="20" fill="#b91c1c"/>
+    <text x="2110" y="598" text-anchor="middle" font-size="11" fill="#fee2e2" letter-spacing="3" font-weight="700">STEP 05</text>
+    <text x="2110" y="620" text-anchor="middle" font-size="14" fill="white" font-weight="800">UNCERTAINTY OUTPUT</text>
+
+    <rect x="1986" y="628" width="248" height="58" rx="10" fill="#7f1d1d" opacity="0.85"/>
+    <text x="2110" y="647" text-anchor="middle" font-size="10" fill="#fca5a5" font-weight="700">Monte Carlo Dropout</text>
+    <text x="1998" y="664" font-size="9" fill="#fef2f2">Run same EEG 50× with dropout active</text>
+    <text x="1998" y="679" font-size="9" fill="#fca5a5">Mean = probability · StdDev = uncertainty</text>
+
+    <!-- Output examples -->
+    <rect x="1986" y="696" width="116" height="58" rx="8" fill="#7f1d1d" stroke="#34d399" stroke-width="1.5"/>
+    <text x="2044" y="714" text-anchor="middle" font-size="9" fill="#86efac" font-weight="700">✓ ACT CONFIDENTLY</text>
+    <text x="2044" y="730" text-anchor="middle" font-size="9.5" fill="white">89% ± 3%</text>
+    <text x="2044" y="746" text-anchor="middle" font-size="8.5" fill="#d1fae5">High certainty</text>
+
+    <rect x="2110" y="696" width="124" height="58" rx="8" fill="#7f1d1d" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="2172" y="714" text-anchor="middle" font-size="9" fill="#fde68a" font-weight="700">⚠ INVESTIGATE MORE</text>
+    <text x="2172" y="730" text-anchor="middle" font-size="9.5" fill="white">54% ± 22%</text>
+    <text x="2172" y="746" text-anchor="middle" font-size="8.5" fill="#fef3c7">Borderline case</text>
+
+    <rect x="1986" y="762" width="248" height="30" rx="8" fill="#450a0a" opacity="0.7"/>
+    <text x="2110" y="781" text-anchor="middle" font-size="9.5" fill="#fca5a5">✗ Paper gives NO uncertainty — 51% looks same as 99%</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!--  STEP 6 — EXPLAINABILITY                                      -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <rect x="1700" y="180" width="440" height="270" rx="20" fill="url(#step6Grad)" opacity="0.95"/>
+    <rect x="1700" y="180" width="440" height="270" rx="20" fill="none" stroke="#5eead4" stroke-width="1.5" opacity="0.6"/>
+
+    <rect x="1700" y="180" width="440" height="44" rx="20" fill="#0f766e"/>
+    <rect x="1700" y="204" width="440" height="20" fill="#0f766e"/>
+    <text x="1920" y="208" text-anchor="middle" font-size="11" fill="#99f6e4" letter-spacing="3" font-weight="700">STEP 06</text>
+    <text x="1920" y="230" text-anchor="middle" font-size="14" fill="white" font-weight="800">EXPLAINABILITY LAYER</text>
+
+    <!-- Three panels -->
+    <rect x="1716" y="242" width="128" height="126" rx="10" fill="#134e4a" opacity="0.9" stroke="#2dd4bf" stroke-width="1"/>
+    <text x="1780" y="262" text-anchor="middle" font-size="10" fill="#5eead4" font-weight="700">GradCAM</text>
+    <text x="1780" y="278" text-anchor="middle" font-size="9" fill="#ccfbf1">on Scalogram</text>
+    <text x="1726" y="297" font-size="8.5" fill="#99f6e4">Heatmap overlaid</text>
+    <text x="1726" y="312" font-size="8.5" fill="#99f6e4">on scalogram image</text>
+    <text x="1726" y="329" font-size="8.5" fill="#e0fdfa">Shows WHICH time-</text>
+    <text x="1726" y="344" font-size="8.5" fill="#e0fdfa">frequency triggered</text>
+    <text x="1726" y="360" font-size="8.5" fill="#5eead4">→ Visual for doctor</text>
+
+    <rect x="1852" y="242" width="128" height="126" rx="10" fill="#134e4a" opacity="0.9" stroke="#2dd4bf" stroke-width="1"/>
+    <text x="1916" y="262" text-anchor="middle" font-size="10" fill="#5eead4" font-weight="700">SHAP Values</text>
+    <text x="1916" y="278" text-anchor="middle" font-size="9" fill="#ccfbf1">on Connectivity</text>
+    <text x="1862" y="297" font-size="8.5" fill="#99f6e4">Which electrode</text>
+    <text x="1862" y="312" font-size="8.5" fill="#99f6e4">pair connections</text>
+    <text x="1862" y="329" font-size="8.5" fill="#e0fdfa">were most critical</text>
+    <text x="1862" y="344" font-size="8.5" fill="#e0fdfa">Brain diagram</text>
+    <text x="1862" y="360" font-size="8.5" fill="#5eead4">→ Region mapping</text>
+
+    <rect x="1988" y="242" width="134" height="126" rx="10" fill="#134e4a" opacity="0.9" stroke="#2dd4bf" stroke-width="1"/>
+    <text x="2055" y="262" text-anchor="middle" font-size="10" fill="#5eead4" font-weight="700">Band Radar</text>
+    <text x="2055" y="278" text-anchor="middle" font-size="9" fill="#ccfbf1">Per-band Power</text>
+    <text x="1998" y="297" font-size="8.5" fill="#fbbf24">δ Slow cognitive</text>
+    <text x="1998" y="312" font-size="8.5" fill="#34d399">α Suppressed?</text>
+    <text x="1998" y="327" font-size="8.5" fill="#f87171">β Dopamine link</text>
+    <text x="1998" y="342" font-size="8.5" fill="#e879f9">γ Key biomarker</text>
+    <text x="1998" y="360" font-size="8.5" fill="#5eead4">→ Z-score vs normal</text>
+
+    <!-- Bottom note -->
+    <rect x="1716" y="378" width="406" height="62" rx="8" fill="#042f2e" opacity="0.8"/>
+    <text x="1920" y="398" text-anchor="middle" font-size="10" fill="#2dd4bf" font-weight="700">Paper lists this as FUTURE WORK — you implement it NOW</text>
+    <text x="1920" y="415" text-anchor="middle" font-size="9" fill="#99f6e4">GradCAM → WHAT triggered · SHAP → WHERE in brain · Radar → HOW severe each band</text>
+    <text x="1920" y="430" text-anchor="middle" font-size="9" fill="#ccfbf1">All 3 needed because single XAI method gives incomplete clinical picture</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!--  STEP 7 — DOCTOR DASHBOARD                                    -->
+  <!-- ============================================================ -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="180" width="1460" height="410" rx="20" fill="#0a0f1e" opacity="0.75" stroke="#db2777" stroke-width="1.5"/>
+    <!-- This is the output/dashboard overview section -->
+    <rect x="150" y="180" width="1460" height="44" rx="20" fill="url(#step7Grad)"/>
+    <rect x="150" y="204" width="1460" height="20" fill="#be185d"/>
+    <text x="880" y="209" text-anchor="middle" font-size="11" fill="#fce7f3" letter-spacing="3" font-weight="700">STEP 07 — CLINICAL OUTPUT</text>
+    <text x="880" y="230" text-anchor="middle" font-size="15" fill="white" font-weight="800">DOCTOR DASHBOARD — What the Clinician Sees</text>
+
+    <!-- Panel 1: Detection -->
+    <rect x="170" y="236" width="180" height="150" rx="12" fill="#1a0a14" stroke="#f472b6" stroke-width="1" opacity="0.9"/>
+    <text x="260" y="258" text-anchor="middle" font-size="10" fill="#f9a8d4" font-weight="700">DETECTION</text>
+    <rect x="190" y="266" width="140" height="36" rx="8" fill="#dc2626" opacity="0.8"/>
+    <text x="260" y="289" text-anchor="middle" font-size="14" fill="white" font-weight="800">POSITIVE</text>
+    <text x="260" y="322" text-anchor="middle" font-size="9" fill="#fbcfe8">Schizophrenic</text>
+    <text x="260" y="338" text-anchor="middle" font-size="9" fill="#fbcfe8">indicators detected</text>
+    <text x="260" y="358" text-anchor="middle" font-size="11" fill="#fca5a5" font-weight="700">91% ± 4%</text>
+    <text x="260" y="375" text-anchor="middle" font-size="8.5" fill="#f9a8d4">confidence · high certainty</text>
+
+    <!-- Panel 2: Severity -->
+    <rect x="362" y="236" width="180" height="150" rx="12" fill="#1a0a14" stroke="#f472b6" stroke-width="1" opacity="0.9"/>
+    <text x="452" y="258" text-anchor="middle" font-size="10" fill="#f9a8d4" font-weight="700">SEVERITY INDEX</text>
+    <text x="452" y="296" text-anchor="middle" font-size="36" fill="#f87171" font-weight="800">73</text>
+    <text x="452" y="315" text-anchor="middle" font-size="9" fill="#fca5a5">out of 100</text>
+    <!-- Severity bar -->
+    <rect x="378" y="326" width="148" height="10" rx="5" fill="#450a0a"/>
+    <rect x="378" y="326" width="108" height="10" rx="5" fill="#ef4444"/>
+    <text x="452" y="354" text-anchor="middle" font-size="10" fill="#fbbf24" font-weight="700">Moderate-High</text>
+    <text x="452" y="372" text-anchor="middle" font-size="8.5" fill="#fbcfe8">→ Psychiatric referral</text>
+
+    <!-- Panel 3: Brain Topo -->
+    <rect x="554" y="236" width="190" height="150" rx="12" fill="#1a0a14" stroke="#f472b6" stroke-width="1" opacity="0.9"/>
+    <text x="649" y="258" text-anchor="middle" font-size="10" fill="#f9a8d4" font-weight="700">BRAIN TOPOGRAPHY</text>
+    <!-- Simple brain diagram -->
+    <ellipse cx="649" cy="320" rx="60" ry="50" fill="#2d1f3d" stroke="#7c3aed" stroke-width="1"/>
+    <!-- Electrode dots coloured by severity -->
+    <circle cx="620" cy="298" r="6" fill="#ef4444" opacity="0.9"/><!-- F7 -->
+    <circle cx="638" cy="295" r="6" fill="#f87171" opacity="0.9"/><!-- F3 -->
+    <circle cx="660" cy="295" r="6" fill="#fbbf24" opacity="0.9"/><!-- F4 -->
+    <circle cx="678" cy="298" r="6" fill="#ef4444" opacity="0.9"/><!-- F8 -->
+    <circle cx="613" cy="318" r="6" fill="#f87171" opacity="0.9"/><!-- T3 -->
+    <circle cx="632" cy="316" r="6" fill="#fbbf24" opacity="0.9"/><!-- C3 -->
+    <circle cx="649" cy="315" r="6" fill="#34d399" opacity="0.9"/><!-- Cz -->
+    <circle cx="666" cy="316" r="6" fill="#fbbf24" opacity="0.9"/><!-- C4 -->
+    <circle cx="685" cy="318" r="6" fill="#ef4444" opacity="0.9"/><!-- T4 -->
+    <circle cx="618" cy="336" r="6" fill="#60a5fa" opacity="0.9"/><!-- T5 -->
+    <circle cx="636" cy="338" r="6" fill="#34d399" opacity="0.9"/><!-- P3 -->
+    <circle cx="649" cy="340" r="6" fill="#34d399" opacity="0.9"/><!-- Pz -->
+    <circle cx="662" cy="338" r="6" fill="#34d399" opacity="0.9"/><!-- P4 -->
+    <circle cx="680" cy="336" r="6" fill="#60a5fa" opacity="0.9"/><!-- T6 -->
+    <circle cx="638" cy="356" r="6" fill="#34d399" opacity="0.9"/><!-- O1 -->
+    <circle cx="660" cy="356" r="6" fill="#34d399" opacity="0.9"/><!-- O2 -->
+    <text x="649" y="380" text-anchor="middle" font-size="8" fill="#f9a8d4">Red = abnormal · Green = normal</text>
+
+    <!-- Panel 4: Frequency Analysis -->
+    <rect x="756" y="236" width="210" height="150" rx="12" fill="#1a0a14" stroke="#f472b6" stroke-width="1" opacity="0.9"/>
+    <text x="861" y="258" text-anchor="middle" font-size="10" fill="#f9a8d4" font-weight="700">FREQUENCY ANALYSIS</text>
+    <!-- Band bars -->
+    <text x="772" y="278" font-size="9" fill="#fbbf24">δ Delta</text>
+    <rect x="810" y="269" width="140" height="10" rx="4" fill="#1e293b"/>
+    <rect x="810" y="269" width="112" height="10" rx="4" fill="#f59e0b" opacity="0.8"/>
+    <text x="772" y="298" font-size="9" fill="#34d399">θ Theta</text>
+    <rect x="810" y="289" width="140" height="10" rx="4" fill="#1e293b"/>
+    <rect x="810" y="289" width="90" height="10" rx="4" fill="#10b981" opacity="0.8"/>
+    <text x="772" y="318" font-size="9" fill="#f87171">α Alpha ↓</text>
+    <rect x="810" y="309" width="140" height="10" rx="4" fill="#1e293b"/>
+    <rect x="810" y="309" width="42" height="10" rx="4" fill="#ef4444" opacity="0.9"/>
+    <text x="772" y="338" font-size="9" fill="#fbbf24">β Beta</text>
+    <rect x="810" y="329" width="140" height="10" rx="4" fill="#1e293b"/>
+    <rect x="810" y="329" width="78" height="10" rx="4" fill="#f59e0b" opacity="0.8"/>
+    <text x="772" y="358" font-size="9" fill="#e879f9">γ Gamma ↓</text>
+    <rect x="810" y="349" width="140" height="10" rx="4" fill="#1e293b"/>
+    <rect x="810" y="349" width="36" height="10" rx="4" fill="#a855f7" opacity="0.9"/>
+    <text x="772" y="378" font-size="8.5" fill="#fca5a5">α -2.3σ  γ -1.8σ below normal baseline</text>
+
+    <!-- Panel 5: Key Findings -->
+    <rect x="978" y="236" width="240" height="150" rx="12" fill="#1a0a14" stroke="#f472b6" stroke-width="1" opacity="0.9"/>
+    <text x="1098" y="258" text-anchor="middle" font-size="10" fill="#f9a8d4" font-weight="700">KEY CLINICAL FINDINGS</text>
+    <text x="994" y="278" font-size="9" fill="#fca5a5">→ Frontal-temporal desync detected</text>
+    <text x="994" y="296" font-size="9" fill="#fca5a5">→ Gamma deficit (frontal lobe)</text>
+    <text x="994" y="314" font-size="9" fill="#fca5a5">→ Alpha suppression (parietal)</text>
+    <text x="994" y="332" font-size="9" fill="#fbbf24">→ Positive symptom profile</text>
+    <text x="994" y="352" font-size="9" fill="#86efac">→ Trend: improving from last visit</text>
+    <!-- Severity trend mini chart -->
+    <polyline points="994,375 1030,368 1066,372 1102,360 1138,350 1174,342 1210,335" stroke="#34d399" stroke-width="2" fill="none"/>
+    <text x="994" y="388" font-size="8" fill="#6ee7b7">6-month severity trend ↓ (treatment working)</text>
+
+    <!-- Panel 6: Actions -->
+    <rect x="1230" y="236" width="360" height="150" rx="12" fill="#1a0a14" stroke="#f472b6" stroke-width="1" opacity="0.9"/>
+    <text x="1410" y="258" text-anchor="middle" font-size="10" fill="#f9a8d4" font-weight="700">RECOMMENDATIONS &amp; ACTIONS</text>
+    <text x="1246" y="278" font-size="9" fill="#fbcfe8">→ Psychiatric evaluation: HIGH PRIORITY</text>
+    <text x="1246" y="296" font-size="9" fill="#fbcfe8">→ Compare with previous EEG if available</text>
+    <text x="1246" y="314" font-size="9" fill="#fbcfe8">→ Cross-reference clinical PANSS score</text>
+    <text x="1246" y="332" font-size="9" fill="#fbcfe8">→ NOT a diagnosis — AI screening aid only</text>
+
+    <!-- Buttons -->
+    <rect x="1246" y="348" width="100" height="28" rx="8" fill="#be185d" opacity="0.9"/>
+    <text x="1296" y="366" text-anchor="middle" font-size="9.5" fill="white" font-weight="700">📄 Export PDF</text>
+    <rect x="1356" y="348" width="110" height="28" rx="8" fill="#0891b2" opacity="0.9"/>
+    <text x="1411" y="366" text-anchor="middle" font-size="9.5" fill="white" font-weight="700">📈 Track History</text>
+    <rect x="1476" y="348" width="94" height="28" rx="8" fill="#059669" opacity="0.9"/>
+    <text x="1523" y="366" text-anchor="middle" font-size="9.5" fill="white" font-weight="700">🔁 New Scan</text>
+
+    <text x="1246" y="390" font-size="8.5" fill="#9d174d">⚠ This tool is a clinical screening aid only. Not a replacement for psychiatric diagnosis.</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!--  TECH STACK BAR (bottom)                                      -->
+  <!-- ============================================================ -->
+  <rect x="100" y="1130" width="2200" height="200" rx="16" fill="#0d1120" stroke="#1c2340" stroke-width="1.5" opacity="0.95"/>
+  <text x="1200" y="1162" text-anchor="middle" font-size="13" fill="#5a6080" letter-spacing="4" font-weight="700">COMPLETE TECH STACK</text>
+
+  <!-- Stack items -->
+  <g>
+    <!-- MNE -->
+    <rect x="130" y="1175" width="155" height="130" rx="12" fill="#1a103a" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="207" y="1200" text-anchor="middle" font-size="22">🧠</text>
+    <text x="207" y="1222" text-anchor="middle" font-size="11" fill="#a78bfa" font-weight="700">MNE-Python</text>
+    <text x="207" y="1238" text-anchor="middle" font-size="9" fill="#c4b5fd">EEG Preprocessing</text>
+    <text x="207" y="1253" text-anchor="middle" font-size="9" fill="#c4b5fd">ICA · Filtering</text>
+    <text x="207" y="1268" text-anchor="middle" font-size="9" fill="#c4b5fd">Brain topography</text>
+    <text x="207" y="1284" text-anchor="middle" font-size="8" fill="#7c3aed">Clinical standard</text>
+
+    <!-- spkit -->
+    <rect x="297" y="1175" width="155" height="130" rx="12" fill="#0c3b52" stroke="#0891b2" stroke-width="1.5"/>
+    <text x="374" y="1200" text-anchor="middle" font-size="22">〰️</text>
+    <text x="374" y="1222" text-anchor="middle" font-size="11" fill="#67e8f9" font-weight="700">spkit</text>
+    <text x="374" y="1238" text-anchor="middle" font-size="9" fill="#a5f3fc">Morlet CWT</text>
+    <text x="374" y="1253" text-anchor="middle" font-size="9" fill="#a5f3fc">ScalogramCWT()</text>
+    <text x="374" y="1268" text-anchor="middle" font-size="9" fill="#a5f3fc">Exact paper match</text>
+    <text x="374" y="1284" text-anchor="middle" font-size="8" fill="#0891b2">Proven approach</text>
+
+    <!-- PyTorch -->
+    <rect x="464" y="1175" width="155" height="130" rx="12" fill="#052e16" stroke="#059669" stroke-width="1.5"/>
+    <text x="541" y="1200" text-anchor="middle" font-size="22">🔥</text>
+    <text x="541" y="1222" text-anchor="middle" font-size="11" fill="#6ee7b7" font-weight="700">PyTorch</text>
+    <text x="541" y="1238" text-anchor="middle" font-size="9" fill="#a7f3d0">EEG-Conformer</text>
+    <text x="541" y="1253" text-anchor="middle" font-size="9" fill="#a7f3d0">Training engine</text>
+    <text x="541" y="1268" text-anchor="middle" font-size="9" fill="#a7f3d0">MC Dropout</text>
+    <text x="541" y="1284" text-anchor="middle" font-size="8" fill="#059669">Deep learning core</text>
+
+    <!-- PyG -->
+    <rect x="631" y="1175" width="155" height="130" rx="12" fill="#052e16" stroke="#059669" stroke-width="1.5"/>
+    <text x="708" y="1200" text-anchor="middle" font-size="22">🕸️</text>
+    <text x="708" y="1222" text-anchor="middle" font-size="11" fill="#6ee7b7" font-weight="700">PyTorch Geometric</text>
+    <text x="708" y="1238" text-anchor="middle" font-size="9" fill="#a7f3d0">Graph Attention Net</text>
+    <text x="708" y="1253" text-anchor="middle" font-size="9" fill="#a7f3d0">GAT layers</text>
+    <text x="708" y="1268" text-anchor="middle" font-size="9" fill="#a7f3d0">Connectivity graph</text>
+    <text x="708" y="1284" text-anchor="middle" font-size="8" fill="#059669">Best graph library</text>
+
+    <!-- Lightly -->
+    <rect x="798" y="1175" width="155" height="130" rx="12" fill="#431407" stroke="#d97706" stroke-width="1.5"/>
+    <text x="875" y="1200" text-anchor="middle" font-size="22">🔄</text>
+    <text x="875" y="1222" text-anchor="middle" font-size="11" fill="#fde68a" font-weight="700">Lightly (SimCLR)</text>
+    <text x="875" y="1238" text-anchor="middle" font-size="9" fill="#fef3c7">Self-supervised</text>
+    <text x="875" y="1253" text-anchor="middle" font-size="9" fill="#fef3c7">pretraining</text>
+    <text x="875" y="1268" font-size="9" fill="#fef3c7" text-anchor="middle">EEG augmentations</text>
+    <text x="875" y="1284" text-anchor="middle" font-size="8" fill="#d97706">Small dataset fix</text>
+
+    <!-- Captum + SHAP -->
+    <rect x="965" y="1175" width="155" height="130" rx="12" fill="#134e4a" stroke="#0d9488" stroke-width="1.5"/>
+    <text x="1042" y="1200" text-anchor="middle" font-size="22">🔍</text>
+    <text x="1042" y="1222" text-anchor="middle" font-size="11" fill="#5eead4" font-weight="700">Captum + SHAP</text>
+    <text x="1042" y="1238" text-anchor="middle" font-size="9" fill="#99f6e4">GradCAM (Captum)</text>
+    <text x="1042" y="1253" text-anchor="middle" font-size="9" fill="#99f6e4">SHAP explainability</text>
+    <text x="1042" y="1268" text-anchor="middle" font-size="9" fill="#99f6e4">PyTorch-native XAI</text>
+    <text x="1042" y="1284" text-anchor="middle" font-size="8" fill="#0d9488">Doctor trust layer</text>
+
+    <!-- FastAPI -->
+    <rect x="1132" y="1175" width="155" height="130" rx="12" fill="#1a0a14" stroke="#db2777" stroke-width="1.5"/>
+    <text x="1209" y="1200" text-anchor="middle" font-size="22">⚡</text>
+    <text x="1209" y="1222" text-anchor="middle" font-size="11" fill="#f9a8d4" font-weight="700">FastAPI</text>
+    <text x="1209" y="1238" text-anchor="middle" font-size="9" fill="#fbcfe8">Async Python backend</text>
+    <text x="1209" y="1253" text-anchor="middle" font-size="9" fill="#fbcfe8">Faster than Flask</text>
+    <text x="1209" y="1268" text-anchor="middle" font-size="9" fill="#fbcfe8">REST endpoints</text>
+    <text x="1209" y="1284" text-anchor="middle" font-size="8" fill="#db2777">ML-ready serving</text>
+
+    <!-- React Dashboard -->
+    <rect x="1299" y="1175" width="155" height="130" rx="12" fill="#0c1a38" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="1376" y="1200" text-anchor="middle" font-size="22">🖥️</text>
+    <text x="1376" y="1222" text-anchor="middle" font-size="11" fill="#93c5fd" font-weight="700">React Dashboard</text>
+    <text x="1376" y="1238" text-anchor="middle" font-size="9" fill="#bfdbfe">Doctor-facing UI</text>
+    <text x="1376" y="1253" text-anchor="middle" font-size="9" fill="#bfdbfe">Interactive charts</text>
+    <text x="1376" y="1268" text-anchor="middle" font-size="9" fill="#bfdbfe">Brain topography</text>
+    <text x="1376" y="1284" text-anchor="middle" font-size="8" fill="#3b82f6">Clinical interface</text>
+
+    <!-- HF Spaces -->
+    <rect x="1466" y="1175" width="155" height="130" rx="12" fill="#1e0a14" stroke="#ec4899" stroke-width="1.5"/>
+    <text x="1543" y="1200" text-anchor="middle" font-size="22">🤗</text>
+    <text x="1543" y="1222" text-anchor="middle" font-size="11" fill="#f9a8d4" font-weight="700">HuggingFace Spaces</text>
+    <text x="1543" y="1238" text-anchor="middle" font-size="9" fill="#fbcfe8">Free GPU hosting</text>
+    <text x="1543" y="1253" text-anchor="middle" font-size="9" fill="#fbcfe8">Shareable prototype</text>
+    <text x="1543" y="1268" text-anchor="middle" font-size="9" fill="#fbcfe8">Gradio or React</text>
+    <text x="1543" y="1284" text-anchor="middle" font-size="8" fill="#ec4899">Public demo ready</text>
+
+    <!-- Datasets -->
+    <rect x="1633" y="1175" width="155" height="130" rx="12" fill="#0c2a1c" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="1710" y="1200" text-anchor="middle" font-size="22">📊</text>
+    <text x="1710" y="1222" text-anchor="middle" font-size="11" fill="#86efac" font-weight="700">Datasets</text>
+    <text x="1710" y="1238" text-anchor="middle" font-size="9" fill="#bbf7d0">MSU EEG: 84 subjects</text>
+    <text x="1710" y="1253" text-anchor="middle" font-size="9" fill="#bbf7d0">RepOD: 28 subjects</text>
+    <text x="1710" y="1268" text-anchor="middle" font-size="9" fill="#bbf7d0">Both publicly free</text>
+    <text x="1710" y="1284" text-anchor="middle" font-size="8" fill="#16a34a">Benchmark validated</text>
+
+    <!-- Timeline -->
+    <rect x="1800" y="1175" width="470" height="130" rx="12" fill="#0a0f1e" stroke="#4f8cff" stroke-width="1.5"/>
+    <text x="2035" y="1200" text-anchor="middle" font-size="11" fill="#93c5fd" font-weight="700" letter-spacing="2">4-WEEK BUILD PLAN</text>
+    <text x="1820" y="1220" font-size="10" fill="#4f8cff" font-weight="700">Wk 1</text>
+    <text x="1860" y="1220" font-size="9.5" fill="#bfdbfe">MNE preprocessing · CWT scalograms · PLV connectivity matrices</text>
+    <text x="1820" y="1240" font-size="10" fill="#34d399" font-weight="700">Wk 2</text>
+    <text x="1860" y="1240" font-size="9.5" fill="#bfdbfe">EEG-Conformer + GAT + Cross-attention · SSL pretraining · Fine-tune</text>
+    <text x="1820" y="1260" font-size="10" fill="#fbbf24" font-weight="700">Wk 3</text>
+    <text x="1860" y="1260" font-size="9.5" fill="#bfdbfe">GradCAM · SHAP · Band radar · Brain topography · MC Dropout</text>
+    <text x="1820" y="1280" font-size="10" fill="#f472b6" font-weight="700">Wk 4</text>
+    <text x="1860" y="1280" font-size="9.5" fill="#bfdbfe">FastAPI backend · Doctor dashboard · PDF export · HF deployment</text>
+    <text x="1820" y="1297" font-size="9" fill="#6b7280">Target: 99.8%+ accuracy + full clinical explainability</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!--  IMPROVEMENT TABLE (bottom right area)                        -->
+  <!-- ============================================================ -->
+  <rect x="100" y="1350" width="2200" height="320" rx="16" fill="#0a0f1e" stroke="#1c2340" stroke-width="1.5" opacity="0.95"/>
+  <text x="1200" y="1382" text-anchor="middle" font-size="13" fill="#5a6080" letter-spacing="4" font-weight="700">HOW YOU GO BEYOND THE 2025 PAPER</text>
+
+  <!-- Headers -->
+  <rect x="120" y="1392" width="340" height="28" rx="6" fill="#1c2340"/>
+  <rect x="470" y="1392" width="640" height="28" rx="6" fill="#7c3aed" opacity="0.3"/>
+  <rect x="1120" y="1392" width="640" height="28" rx="6" fill="#059669" opacity="0.3"/>
+  <rect x="1770" y="1392" width="510" height="28" rx="6" fill="#db2777" opacity="0.3"/>
+
+  <text x="290" y="1411" text-anchor="middle" font-size="10" fill="#94a3b8" font-weight="700" letter-spacing="2">DIMENSION</text>
+  <text x="790" y="1411" text-anchor="middle" font-size="10" fill="#a78bfa" font-weight="700" letter-spacing="2">THE 2025 PAPER</text>
+  <text x="1440" y="1411" text-anchor="middle" font-size="10" fill="#6ee7b7" font-weight="700" letter-spacing="2">YOUR SYSTEM</text>
+  <text x="2025" y="1411" text-anchor="middle" font-size="10" fill="#f9a8d4" font-weight="700" letter-spacing="2">CLINICAL IMPACT</text>
+
+  <!-- Rows -->
+  <g font-size="9.5">
+    <!-- Row 1 -->
+    <rect x="120" y="1428" width="2160" height="26" rx="4" fill="#0d1120" opacity="0.5"/>
+    <text x="140" y="1445" fill="#94a3b8" font-weight="600">Pretrained Domain</text>
+    <text x="490" y="1445" fill="#fca5a5">ImageNet (natural photos — wrong domain)</text>
+    <text x="1140" y="1445" fill="#86efac">SimCLR self-supervised on EEG signals</text>
+    <text x="1790" y="1445" fill="#fbcfe8">Better features = better detection</text>
+
+    <!-- Row 2 -->
+    <rect x="120" y="1458" width="2160" height="26" rx="4" fill="#111827" opacity="0.5"/>
+    <text x="140" y="1475" fill="#94a3b8" font-weight="600">Architecture</text>
+    <text x="490" y="1475" fill="#fca5a5">EfficientNetB3 + DenseNet169 (image CNNs)</text>
+    <text x="1140" y="1475" fill="#86efac">EEG-Conformer + GAT + Cross-Attention</text>
+    <text x="1790" y="1475" fill="#fbcfe8">Captures time, frequency AND connectivity</text>
+
+    <!-- Row 3 -->
+    <rect x="120" y="1488" width="2160" height="26" rx="4" fill="#0d1120" opacity="0.5"/>
+    <text x="140" y="1505" fill="#94a3b8" font-weight="600">Signal Representation</text>
+    <text x="490" y="1505" fill="#fca5a5">CWT scalograms only (within-channel)</text>
+    <text x="1140" y="1505" fill="#86efac">Scalograms + PLV connectivity (between-channel)</text>
+    <text x="1790" y="1505" fill="#fbcfe8">Disconnection syndrome properly captured</text>
+
+    <!-- Row 4 -->
+    <rect x="120" y="1518" width="2160" height="26" rx="4" fill="#111827" opacity="0.5"/>
+    <text x="140" y="1535" fill="#94a3b8" font-weight="600">Feature Selection</text>
+    <text x="490" y="1535" fill="#fca5a5">ASBO statistical wrapper (post-hoc)</text>
+    <text x="1140" y="1535" fill="#86efac">Cross-attention (end-to-end learned)</text>
+    <text x="1790" y="1535" fill="#fbcfe8">Selection tied to clinical meaning</text>
+
+    <!-- Row 5 -->
+    <rect x="120" y="1548" width="2160" height="26" rx="4" fill="#0d1120" opacity="0.5"/>
+    <text x="140" y="1565" fill="#94a3b8" font-weight="600">Uncertainty</text>
+    <text x="490" y="1565" fill="#fca5a5">None — 51% looks same as 99%</text>
+    <text x="1140" y="1565" fill="#86efac">Monte Carlo Dropout — probability ± confidence</text>
+    <text x="1790" y="1565" fill="#fbcfe8">Doctor knows when to investigate further</text>
+
+    <!-- Row 6 -->
+    <rect x="120" y="1578" width="2160" height="26" rx="4" fill="#111827" opacity="0.5"/>
+    <text x="140" y="1595" fill="#94a3b8" font-weight="600">Explainability</text>
+    <text x="490" y="1595" fill="#fca5a5">None (listed as future work in paper)</text>
+    <text x="1140" y="1595" fill="#86efac">GradCAM + SHAP + Band Radar (all 3)</text>
+    <text x="1790" y="1595" fill="#fbcfe8">Doctors can see WHY and WHERE</text>
+
+    <!-- Row 7 -->
+    <rect x="120" y="1608" width="2160" height="26" rx="4" fill="#0d1120" opacity="0.5"/>
+    <text x="140" y="1625" fill="#94a3b8" font-weight="600">Clinical Output</text>
+    <text x="490" y="1625" fill="#fca5a5">Binary yes/no only</text>
+    <text x="1140" y="1625" fill="#86efac">Severity score + brain map + trends + PDF</text>
+    <text x="1790" y="1625" fill="#fbcfe8">Actionable clinical decision support</text>
+
+    <!-- Row 8 -->
+    <rect x="120" y="1638" width="2160" height="26" rx="4" fill="#111827" opacity="0.5"/>
+    <text x="140" y="1655" fill="#94a3b8" font-weight="600">Hospital Usability</text>
+    <text x="490" y="1655" fill="#fca5a5">Research prototype — zero clinical utility</text>
+    <text x="1140" y="1655" fill="#86efac">Full dashboard · PDF export · longitudinal tracking</text>
+    <text x="1790" y="1655" fill="#fbcfe8">Something a psychiatrist actually wants</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1200" y="1692" text-anchor="middle" font-size="10" fill="#374151" letter-spacing="3">EEG SCHIZOPHRENIA AI SYSTEM · BASED ON SCIENTIFIC REPORTS 2025 · EXTENDED WITH CLINICAL UTILITY LAYER</text>
+
+</svg>
