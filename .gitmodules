@@ -1,0 +1,3 @@
+[submodule "EEGSchizNet"]
+	path = EEGSchizNet
+	url = https://github.com/SunkariManwithaGopal/EEGSchizNet.git
